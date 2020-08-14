@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+
+<body>
+    <div>
+        {% if message %}
+        <h2>{{ message }}</h2>
+        {% endif %}
+        {% if data %}
+        <h4>Name: {{data.name}}</h4>
+        <h4>Email: {{ data.email }}</h4>
+        <h4>Phone: {{ data.phone }}</h4>
+        <h4>Gender: {{ data.gender }}</h4>
+        {% endif %}
+        <a href="searchUser">Enter email again</a>
+        <br>
+        <a href="{% url 'home' %}">Enter user info</a>
+    </div>
+</body>
+
+</html>
